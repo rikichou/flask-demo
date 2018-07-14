@@ -1,9 +1,37 @@
+<!DOCTYPE html>
+
 <html>
+
 <head>
     <title> Face Verification </title>
 <head>
 
+<script>
+
+function checkForm()
+{
+    alert(2);
+    return True;
+}
+</script>
+
 <body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert("Document is ready")
+        });
+        $(document).on('change', '#PictureUrl', function () {
+            alert(1);
+        });
+    </script>
+
     <h1> Tensortec Face Verification </h1>
+    <form onsubmit='checkForm()' method="get">
+        <p>First Image: <input type="file" size="30" name="first_image" id="image1"/></p>
+        <p>Second Image: <input type="file" size="30" name="second_image" id="image2"/></p>
+        <input id="PictureUrl" runat="server" name="File1" type="file" />
+        <input type="submit" value="Submit" action=""/>
+    </form>
 </body>
+
 </html>
